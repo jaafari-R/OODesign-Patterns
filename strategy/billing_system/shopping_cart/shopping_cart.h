@@ -4,7 +4,7 @@
 #include <vector>
 
 #include "../product/product.h"
-#include "../payment/payment.h"
+#include "../payment/payment_i.h"
 
 class ShopingCart {
 public:
@@ -13,7 +13,7 @@ public:
 
     void addProduct(Product);
     void removeProduct(Product);
-    void pay(Payment);
+    void pay(IPayment);
 private:
     std::vector<Product> products;
 };
