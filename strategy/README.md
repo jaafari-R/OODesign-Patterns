@@ -6,6 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-        
+        <img src="billing_system/uml/billing_system.png">
 </body>
 </html>
