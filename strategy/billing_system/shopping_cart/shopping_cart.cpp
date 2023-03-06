@@ -23,7 +23,8 @@ int ShoppingCart::calculateTotal() {
     return sum;
 }
 
-void ShoppingCart::pay(const IPayment& payment)
+void ShoppingCart::pay(IPayment& paymentStrategy)
 {
-
+    int amount = calculateTotal();
+    paymentStrategy.pay(amount);
 }

@@ -16,7 +16,7 @@ public:
 
     int calculateTotal();
 
-    void pay(const IPayment& payment);
+    void pay(IPayment& paymentStrategy);
 private:
     std::list<Product> products;
 };
