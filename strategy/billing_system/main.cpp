@@ -16,13 +16,17 @@ int main()
     for(const auto& product: products)
         sc.addProduct(product);
 
-    // Use different Payment Strategies
+    // Use Credit Card Payment Strategy
     std::string credit_card_name = "Ramadan";
     std::string credit_card_number = "1234";
     CreditCardPay credit_card_pay_strategy(credit_card_name, credit_card_number);
     sc.pay(credit_card_pay_strategy);
 
-
+    // Use Paypal Payment Strategy
+    std::string email = "ramadan@gmail.com";
+    std::string password = "854796321";
+    PaypalPay paypal_pay_strategy(email, password);
+    sc.pay(paypal_pay_strategy);
 
     return 0;
 }

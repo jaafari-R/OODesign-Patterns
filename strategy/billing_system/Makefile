@@ -1,0 +1,2 @@
+a.out: main.cpp payment/credit_card_payment.cpp payment/paypal_payment.cpp shopping_cart/shopping_cart.cpp product/product.cpp
+	g++ main.cpp payment/credit_card_payment.cpp payment/paypal_payment.cpp shopping_cart/shopping_cart.cpp product/product.cpp 
