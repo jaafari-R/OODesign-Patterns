@@ -9,8 +9,13 @@ public:
     ~Product();
 
 
+    
+    std::string getUpcCode();
+    void setUpcCode(std::string upc_code);
     int getPrice();
     void setPrice(int price);
+
+    bool operator==(const Product& p);
 
 private:
     int price;

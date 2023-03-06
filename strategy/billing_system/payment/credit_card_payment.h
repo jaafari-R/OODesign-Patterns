@@ -3,7 +3,9 @@
 
 #include <string>
 
-class CreaditCardPay
+#include "payment_i.h"
+
+class CreaditCardPay : public IPayment
 {
 public:
     CreaditCardPay();

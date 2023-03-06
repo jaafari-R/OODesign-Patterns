@@ -3,7 +3,9 @@
 
 #include <string>
 
-class PaypalPay
+#include "payment_i.h"
+
+class PaypalPay : public IPayment
 {
 public:
     PaypalPay();

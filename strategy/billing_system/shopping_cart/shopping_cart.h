@@ -1,7 +1,7 @@
 #ifndef __SHOPING_CART__
 #define __SHOPING_CART__
 
-#include <vector>
+#include <list>
 
 #include "../product/product.h"
 #include "../payment/payment_i.h"
@@ -11,11 +11,11 @@ public:
     ShopingCart();
     ~ShopingCart();
 
-    void addProduct(Product);
-    void removeProduct(Product);
-    void pay(IPayment);
+    void addProduct(const Product& p);
+    void removeProduct(const Product& p);
+    void pay(const IPayment& payment);
 private:
-    std::vector<Product> products;
+    std::list<Product> products;
 };
 
 #endif//__SHOPING_CART__

@@ -4,10 +4,7 @@
 class IPayment
 {
 public:
-    IPayment();
-    ~IPayment();
-
-    void pay(int amount);
+    virtual void pay(int amount);
 private:
 };
 
