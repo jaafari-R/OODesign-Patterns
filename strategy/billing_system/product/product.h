@@ -5,7 +5,7 @@
 
 class Product {
 public:
-    Product(int price = 0);
+    Product(std::string upc_code, int price = 0);
     ~Product();
 
 

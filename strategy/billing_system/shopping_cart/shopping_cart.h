@@ -6,13 +6,16 @@
 #include "../product/product.h"
 #include "../payment/payment_i.h"
 
-class ShopingCart {
+class ShoppingCart {
 public:
-    ShopingCart();
-    ~ShopingCart();
+    ShoppingCart();
+    ~ShoppingCart();
 
     void addProduct(const Product& p);
     void removeProduct(const Product& p);
+
+    int calculateTotal();
+
     void pay(const IPayment& payment);
 private:
     std::list<Product> products;

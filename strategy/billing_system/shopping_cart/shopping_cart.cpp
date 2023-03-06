@@ -2,27 +2,28 @@
 
 #include "shopping_cart.h"
 
-ShopingCart::ShopingCart() {}
-ShopingCart::~ShopingCart() {}
+ShoppingCart::ShoppingCart() {}
+ShoppingCart::~ShoppingCart() {}
 
-void ShopingCart::addProduct(const Product& p)
+void ShoppingCart::addProduct(const Product& p)
 {
     this->products.push_back(p);
 }
 
-void ShopingCart::removeProduct(const Product& p)
+void ShoppingCart::removeProduct(const Product& p)
 {
     std::list<Product>::iterator i = std::find(this->products.begin(), this->products.end(), p);
     this->products.erase(i);
 }
 
-void ShopingCart::pay(const IPayment& payment)
-{
-
+int ShoppingCart::calculateTotal() {
+    int sum = 0;
+    for(Product& p: products)
+        sum += p.getPrice();
+    return sum;
 }
 
-/* ---- Operators Override ---- */
-bool Product::operator==(const Product& p)
+void ShoppingCart::pay(const IPayment& payment)
 {
-    return this->upc_code == p.upc_code;
+
 }
