@@ -8,10 +8,14 @@
 class PaypalPay : public IPayment
 {
 public:
-    PaypalPay();
+    PaypalPay(std::string email, std::string password);
     ~PaypalPay();
 
     void pay(int amount);
+
+    std::string getEmail();
+    void setEmail(std::string email);
+    void setPassword(std::string password);
 private:
     std::string email;
     std::string password;

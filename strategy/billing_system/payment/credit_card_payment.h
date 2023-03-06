@@ -5,13 +5,17 @@
 
 #include "payment_i.h"
 
-class CreaditCardPay : public IPayment
+class CreditCardPay : public IPayment
 {
 public:
-    CreaditCardPay();
-    ~CreaditCardPay();
+    CreditCardPay(std::string name, std::string card_number);
+    ~CreditCardPay();
 
     void pay(int amount);
+
+    std::string getName();
+    void setName(std::string name);
+    void setCardNumber(std::string card_number);
 private:
     std::string name;
     std::string card_number;
